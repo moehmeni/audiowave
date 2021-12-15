@@ -6,6 +6,10 @@ import os
 
 
 def audio_amplitudes(src):
+    """
+    Generates the audio volume amplitudes per second.
+    returns a list containing numbers from 0 to 100 with a length of the audio seconds
+    """
     audio = AudioSegment.from_file(src)
     bars = int(audio.duration_seconds)
     file_bytes = audio._data
@@ -27,6 +31,9 @@ def audio_amplitudes(src):
 def image_from_amplitudes(
     amplitudes, max_height=50, line_colors=(255, 255, 255), bg_color=(255, 255, 255, 1)
 ):
+    """
+    Creates an image showing the waveform of given list of audio amptitudes
+    """
     LINE_WIDTH = 3
     LINE_MARGIN = 1
 
@@ -53,7 +60,3 @@ def image_from_amplitudes(
     name = f"{str(uuid.uuid4()).replace('-' , '')}.{ex}"
     im.save(os.path.join("waves", name), ex)
     im.show()
-
-
-src = "Billie Eilish - Bad Guy.mp3"
-image_from_amplitudes(audio_amplitudes(src), max_height=50)

@@ -7,7 +7,7 @@
 ## Installation
 ```
 git clone https://github.com/mdmomeni/audiowave
-cd audiowave & pip3 install -r requirements.txt
+sudo apt-get install ffmpeg & cd audiowave & pip3 install -r requirements.txt
 ```
 ## Usage
 ```

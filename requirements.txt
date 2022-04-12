@@ -1,0 +1,3 @@
+pydub
+numpy
+Pillow==9.1.0

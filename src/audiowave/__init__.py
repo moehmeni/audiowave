@@ -1,0 +1,1 @@
+from audiowave.generator import get_waveform_image

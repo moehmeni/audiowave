@@ -3,6 +3,7 @@ from pydub import AudioSegment
 import numpy as np
 from PIL import Image, ImageDraw
 
+
 def generate_amplitudes(src) -> List[int]:
     """
     Generates the audio volume amplitudes per second.
@@ -32,6 +33,7 @@ def get_waveform_image(
     max_height=50,
     line_color=(255, 255, 255),
     bg_color=(255, 255, 255, 0),
+    save=True,
     show=False,
 ) -> Image:
     """
@@ -74,7 +76,8 @@ def get_waveform_image(
 
     name = src.split("/")[-1].split(".")[0] + "_waveform"
     path = f"{name}.{image_format}"
-    im.save(path, image_format)
+    if save:
+        im.save(path, image_format)
     if show:
         im.show()
     return im

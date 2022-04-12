@@ -42,7 +42,8 @@ optional arguments:
 ```python
 from audiowave import get_waveform_image
 
-get_waveform_image("test.mp3", wave_color = (89, 201, 54))
+# It saves the image by default,`save=False` to prevent
+img = get_waveform_image("test.mp3", wave_color=(89, 201, 54))
 ```
 
 **Feel free to create any issue or PR**

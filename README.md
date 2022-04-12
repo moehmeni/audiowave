@@ -7,6 +7,7 @@
 ## Installation
 ```
 git clone https://github.com/mdmomeni/audiowave
+cd audiowave & pip3 install -r requirements.txt
 ```
 ## Usage
 ```

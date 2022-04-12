@@ -38,7 +38,7 @@ optional arguments:
                         The image format
   --show                Show the image
 ```
-### Usage in Python program
+### Usage in a Python program
 ```python
 from audiowave import get_waveform_image
 

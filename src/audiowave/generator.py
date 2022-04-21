@@ -37,7 +37,7 @@ def get_waveform_image(
     show=False,
 ) -> Image:
     """
-    Creates an waveform image from the audio file.
+    Creates a waveform image from the audio file.
     """
     LINE_WIDTH = 3
     LINE_MARGIN = 1
